@@ -1,8 +1,5 @@
-from character_counter import CharacterCounter
+from huffman.file import HuffmanIO
 
-counter = CharacterCounter()
-
-counter.add_text('hello')
-counter.add_text('l')
-
-print(counter.occurences('l'))
+stuff = HuffmanIO()
+stuff.compress_file("test/data/simple.txt", "test/data/test.bin")
+stuff.decompress_file("test/data/test.bin", "test/data/result.txt")

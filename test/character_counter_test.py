@@ -3,7 +3,8 @@ import pytest
 import sys
 import os
 sys.path.append(os.path.abspath('src'))
-from character_counter import CharacterCounter
+
+from huffman.character_counter import CharacterCounter
 
 
 @pytest.fixture

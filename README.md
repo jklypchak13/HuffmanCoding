@@ -1,2 +1,3 @@
 # HuffmanCoding
-A python implementation of Huffman Text Compression
+
+An Implementation of Huffman Text Compression utilizing Python
