@@ -89,3 +89,24 @@ def test_construct_tree_leaf_complex():
     root: Node = data.construct_tree()
 
     assert root.right.right.left.right == Node(2, 'i')
+
+
+def test_construct_tree_biased_popular():
+    """
+    Test the Huffman Tree on a file with many of one letter.
+    """
+    data: HuffmanTree = HuffmanTree('data/biased.txt')
+    root: Node = data.construct_tree()
+
+    assert root.right == Node(3, 'a')
+
+
+def test_construct_tree_biased_unpopular():
+    """
+    Test the Huffman Tree on a file with many of one letter.
+    """
+    data: HuffmanTree = HuffmanTree('data/biased.txt')
+    root: Node = data.construct_tree()
+
+    assert root.left.left == Node(1, 'b')
+    assert root.left.right == Node(1, 'c')
