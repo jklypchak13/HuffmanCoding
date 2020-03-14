@@ -1,8 +1,11 @@
 
 import pytest
 import sys
-sys.path.append('.')
-from src.character_counter import CharacterCounter
+import os
+sys.path.append(os.path.abspath('src'))
+from character_counter import CharacterCounter
+
+
 @pytest.fixture
 def counter():
     return CharacterCounter()
